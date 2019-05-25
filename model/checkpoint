@@ -1,0 +1,2 @@
+model_checkpoint_path: "recipe_decoder_weights"
+all_model_checkpoint_paths: "recipe_decoder_weights"
