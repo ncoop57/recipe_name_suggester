@@ -132,11 +132,10 @@ class RecipeNamer():
                 dec_input, features, hidden)
 
             predicted_id = tf.argmax(predictions[0]).numpy()
-            result.append(self.tokenizer.index_word[predicted_id])
-
             if self.tokenizer.index_word[predicted_id] == '<end>':
                 return result
 
+            result.append(self.tokenizer.index_word[predicted_id])
             dec_input = tf.expand_dims([predicted_id], 0)
 
         return result
