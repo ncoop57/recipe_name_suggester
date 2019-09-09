@@ -13,7 +13,7 @@ def hello():
         print("Got Post request")
         return ' '.join(recipe_name)
     if request.method == 'GET':
-        recipe_name = recipe_namer.predict(Image.open('/var/www/html/recipe_namer/temp_image.jpg'))
+        recipe_name = recipe_namer.predict(Image.open('/workspaces/recipe_name_suggester/temp_image.jpg'))
         return ' '.join(recipe_name)
 
 

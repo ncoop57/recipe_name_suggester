@@ -152,9 +152,9 @@ def create_models():
     encoder = CNN_Encoder(embedding_dim)
     decoder = RNN_Decoder(embedding_dim, units, vocab_size)
 
-    encoder.load_weights('/var/www/html/recipe_namer/model/recipe_encoder_weights')
-    decoder.load_weights('/var/www/html/recipe_namer/model/recipe_decoder_weights')
-    with open('/var/www/html/recipe_namer/model/tokenizer.pickle', 'rb') as handle:
+    encoder.load_weights('/workspaces/recipe_name_suggester/model/recipe_encoder_weights')
+    decoder.load_weights('/workspaces/recipe_name_suggester/model/recipe_decoder_weights')
+    with open('/workspaces/recipe_name_suggester/model/tokenizer.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
 
     return image_features_extract_model, encoder, decoder, tokenizer
